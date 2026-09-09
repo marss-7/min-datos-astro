@@ -39,14 +39,4 @@ EOF
 
 echo "3. Ejecutando Python..."
 # Ejecutamos el script que acabamos de crear
-python3 graficar_mapa.py
-
-echo "4. Guardando en Control de Versiones..."
-# Inicializamos el repositorio
-git init
-# Ignoramos el CSV crudo para no saturar GitHub
-echo "pleyades.csv" > .gitignore
-git add mapeo_pleyades.sh graficar_mapa.py mapa_pleyades.png .gitignore
-# Guardamos la versión
-git commit -m "Pipeline automático: Cone Search y Mapeo de las Pléyades"
-echo "¡Proceso 100% reproducible completado!"
+python graficar_mapa.py
